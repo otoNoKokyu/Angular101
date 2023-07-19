@@ -18,5 +18,9 @@ export class BookServiceService {
   addBook(book: Book){
     this.books.push(book)
   }
+  // deleteBook(title: string) {
+  //   this.books = this.books.filter(book => book.title !== title);
+  //   console.log(this.books);
+  // }
 
 }
