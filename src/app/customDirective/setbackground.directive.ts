@@ -8,10 +8,14 @@ export class SetbackgroundDirective  {
   constructor(private element: ElementRef, private renderer: Renderer2) {
 
    }
-   @HostBinding('style.backgroundColor') background: string 
+   @HostBinding('style.backgroundColor') background: string = 'red'
    @HostListener('mouseleave') yo(){
     console.log(this.background)
-    if (this.background === 'bg-orange-300') this.background = "red"
+    this.background = "red"
+   } 
+   @HostListener('mouseenter') yi(){
+    console.log(this.background)
+    this.background = "orange"
    } 
 
 
