@@ -11,11 +11,10 @@
   <tbody>
     
     <tr *ngFor="let book of books">
-       
       <td>{{ book.title }}</td>
       <td>{{ book.author }}</td>
       <td>{{ book.publicationYear }}</td>
-      <!-- <td><button (click)="deleteBook(book.title)">delete Book</button></td> -->
+      <td><button (click)="deleteBook(book.title)">delete Book</button></td>
     </tr>
   </tbody>
 </table>

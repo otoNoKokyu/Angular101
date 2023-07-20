@@ -7,20 +7,24 @@ import { Book } from './books/book.model';
 export class BookServiceService {
 
   private books: Book[] = [
-    new Book('Book 1', 'Author 1', 2000),
-    new Book('Book 2', 'Author 2', 2010),
-    new Book('Book 3', 'Author 3', 2020),
+    { title: 'Book 1', author: 'Author 1', publicationYear: 2000 },
+    { title: 'Book 2', author: 'Author 2', publicationYear: 2000 },
+    { title: 'Book 3', author: 'Author 3', publicationYear: 2000 },
   ];
 
   getBooks(): Book[] {
     return this.books
   }
-  addBook(book: Book){
+  addBook(book: Book) {
     this.books.push(book)
+
   }
-  // deleteBook(title: string) {
-  //   this.books = this.books.filter(book => book.title !== title);
-  //   console.log(this.books);
-  // }
+  deleteBook(title: any) {
+
+    // const index = this.books.indexOf(title)
+    //  this.books.splice(index,1)
+    this.books.pop()
+    // console.log(this.books);
+  }
 
 }
